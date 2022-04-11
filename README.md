@@ -5,33 +5,29 @@
 >
 > 이 라이브러리는 한자 데이터베이스로 [suminb님의 hanja table.yml](https://raw.githubusercontent.com/suminb/hanja/develop/hanja/table.yml)파일을 다운로드 해서 사용합니다.
 >
-> 사용 허락을 안 받았으니 라이센스 취득하시려면 suminb님의 허락을 받으세요.
+> 사용 허락을 안 받았으니 라이센스가 필요하시면 suminb님의 허락을 받으세요.
 >
-> 그리고 사용 하시다가 빠진 한자 또는 틀린 독음을 발견하시면 [suminb님의 링크](https://docs.google.com/forms/d/e/1FAIpQLScAtw6ylAhy1t0hMn5K25ZbN1vSNPlRdUtebS9PVtKeLQRfvw/viewform)를 통해 제보해주세요.
+> `go test` 를 실행하면 table.yml을 [suminb님의 hanja table.yml](https://raw.githubusercontent.com/suminb/hanja/develop/hanja/table.yml)에서 새로 다운로드 받습니다.
 
+<br>
 
 ## 설치
 
-윈도우(파워쉘)
 ```
-$Env:GOPRIVATE="github.com/askain"		<- private repository
 go get github.com/askain/hanja-golang
 ```
 
-리눅스
-```
-GOPRIVATE="github.com/askain" go get github.com/askain/hanja-golang
-```
+<br>
 
 ## 사용법
-이 모듈은 다른 기능은 없고 한자를 한글 독음으로 변환하는 기능만 있습니다.
 
-`go test` 를 실행하면 table.yml을 [suminb님의 hanja table.yml](https://raw.githubusercontent.com/suminb/hanja/develop/hanja/table.yml)에서 새로 다운로드 받습니다.
+이 모듈은 다른 기능은 없고 한자를 한글 독음으로 변환하는 기능만 있습니다.
 
 ```
 translated := hanja.Translate("大韓民國은 民主共和國이다.")	// translated == `대한민국은 민주공화국이다.`
 ```
 
+<br>
 
 <details>
   <summary>재미로 보는 Go와 Python의 속도비교</summary>
